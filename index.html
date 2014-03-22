@@ -21,9 +21,23 @@ h1{
 font-family:monospace;
 font-weight:normal;
 text-align:center;
-font-size:1.2em;
+font-size:1.4em;
 color:#464646;
 }
+p{
+width:70%;
+margin:auto;
+font-family:georgia;
+margin-top:1em;
+font-size:0.9em;
+}
+#emailForm{
+width:70%;
+margin:auto;
+margin-top:1em;
+}
+
+
 </STYLE>
 </HEAD>
 <BODY>
@@ -32,8 +46,22 @@ color:#464646;
 <div class='mainframe'>
 <h1> Designverk </h1>
 
+<P> Welcome to the future home of Designverk, a full stack web and creative agency based out of Glasgow. </P>
+
+<P><B> To get the latest updates on Designverk, feel free to sign up to our newsletter and we'll keep you in the loop about all things neat. </B> </P>
+
+<form action='insert.php' method='post' id='emailForm'>
+
+Email <input type='email' name='emailAddress' placeholder='Enter your Email'> 
+<input type='submit' name='submit' value='submit'>
+</form>
+
+
+
 
 </div>
+
+<div class='helloWorld'></div>
 
 </BODY>
 </HTML>
