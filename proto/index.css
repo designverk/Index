@@ -1,0 +1,61 @@
+*{margin0;}
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+textarea {
+    resize: vertical;
+}
+.clear{
+clear:both;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Make all img elements responsive */
+img{
+max-width:100%;
+height:auto;
+}
+a{
+text-decoration:none;
+border:none;
+}
+.logo{
+width:15em;
+margin:2% 0% 2% 5%;
+}
+
+	.blackmagic{
+	  max-width:100%;
+	  margin:0px auto;
+	  background:#fff;
+	  box-shadow:0px 0px 5px #888;
+	}
+
+
+/* Optional optimization for page printing */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
