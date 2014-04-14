@@ -1,0 +1,71 @@
+<?php
+$con=mysqli_connect("localhost","designve_ike","Barnabush0pkins","designve_main");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="INSERT INTO newsletter (Email)
+VALUES
+('$_POST[emailAddress]')";
+
+if (!mysqli_query($con,$sql))
+  {
+  die('Error: ' . mysqli_error($con));
+  }
+
+$name = $_POST[emailAddress];
+
+
+mysqli_close($con);
+
+
+$To = 'designverk@outlook.com'; 
+$Subject = 'Email Subscriber Added'; 
+$Message =  $name.'  has subscribed to our email newsletter, yeehah!'; 
+$Headers = "From: reginaldthebotler@designverk.com \r\n" . 
+"Reply-To: stinky@steve.com \r\n" . 
+"Content-type: text/html; charset=UTF-8 \r\n"; 
+  
+mail($To, $Subject, $Message, $Headers); 
+
+?>
+
+<!DOCTYPE>
+<HTML>
+<HEAD>
+
+<TITLE> Thank you </TITLE>
+<meta charset='utf8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<STYLE>
+*{margin:0;}
+
+</STYLE>
+</HEAD>
+<BODY>
+
+<img class='logo' src='/images/logo.svg'/>
+
+
+<ul>
+
+<li>
+<a href='http://www.twitter.com/designverk'>
+<div class='twitter'></div>
+</li>
+</a>
+<a href='http://www.facebook.com/designverk'>
+<li>
+<div class='facebook'></div>
+</li>
+</div>
+</a>
+</ul>
+
+
+</div>
+</BODY>
+</HTML>
