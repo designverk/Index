@@ -138,11 +138,17 @@ width: 25%;
 box-sizing: border-box;
 border-right: 1px solid #ff1b21;
 text-align: center;
+border-collapse:collapse;
 /*padding-top: 0.3em;*/
-vertical-align: middle;
+/*vertical-align: baseline;*/
 height: 2.15em;
 }
-nav li:hover{
+.navCenter{
+/*vertical-align:baseline;*/
+height:1em;
+width:100%;
+}
+nav td:hover{
 background-color: #ffffff;
 background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMScgaGVpZ2h0PScyMicgdmlld0JveD0nMCAwIDUgMTAnPgoJPHJlY3Qgd2lkdGg9JzExMCUnIHg9Jy01JScgeT0nLTUlJyBoZWlnaHQ9JzExMCUnIGZpbGw9JyNmZmZmZmYnLz4KCTxsaW5lIHgxPSctMicgeTE9JzEnIHgyPSc3JyB5Mj0nMTAnIHN0cm9rZT0nI2ZmMWIyMScgc3Ryb2tlLXdpZHRoPScwLjUxJy8+Cgk8bGluZSB4MT0nLTInIHkxPSc2JyB4Mj0nNycgeTI9JzE1JyBzdHJva2U9JyNmZjFiMjEnIHN0cm9rZS13aWR0aD0nMC41MScvPgoJPGxpbmUgeDE9Jy0yJyB5MT0nLTQnIHgyPSc3JyB5Mj0nNScgc3Ryb2tlPScjZmYxYjIxJyBzdHJva2Utd2lkdGg9JzAuNTEnLz4KPC9zdmc+');
 }
