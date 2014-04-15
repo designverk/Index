@@ -3,7 +3,7 @@ background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53
 .headCase{
 width:70%;
 margin:auto;
-background:url('/images/red.svg') repeat-y center;
+background:url('images/red.svg') repeat-y center;
 background-size:2px;
 min-height:10em;
 padding-top:3em;
@@ -105,6 +105,20 @@ margin-top:1em;
 .tenets{
 width:45%;
 margin-right:5%;
+}
+.bottomContact{
+margin-top:1em;
+padding-top:0.25em;
+margin:auto;
+text-align:center;
+vertical-align:middle;
+background:white;
+border:2px solid #ff1b21;
+height: 3em;
+width: 9em;
+font-weight:light;
+font-family:"Bebas", Bebas Neue, Norwich, Serif;
+}
 }
 @media (max-width:960px){
 .headcase{
