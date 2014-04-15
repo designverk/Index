@@ -32,9 +32,11 @@
 
 
 
+	
+	
+	
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<script src='/scripts/responsiveslides.min.js'></script>
-<script src='/scripts/flickr.js'></script>
+
 
 <!-- Header time transition -->
 <script>
@@ -69,52 +71,6 @@ $('nav').css('border-color','#fff');
 };
 </script>
 
-<!-- Slides -->
-<script>
-  $(function() {
-	$(".rslides").responsiveSlides({
-	auto: true,             // Boolean: Animate automatically, true or false
-	speed: 700,            // Integer: Speed of the transition, in milliseconds
-	timeout: 8000,          // Integer: Time between slide transitions, in milliseconds
-	nav: true,
-	pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-	navContainer: ".sliderControls", 
-	pager: false,
-  });
-});
-</script>
 
-<!-- New Contact Form Script -->
-<script>
-$(document).ready(function() {
-   $.get( "/contact-form.html", function( data ) {
-      $( data ).insertAfter('header');
-      $('.formWrapPlace').toggleClass('hidden');
-   });
-   $('#contact').click(function() {
-      $('.formWrapPlace').toggleClass('hidden');
-      $('html, body').animate({
-      scrollTop: $(".formWrapper").offset().top
-      }, 1000);
-   });
-});
-</script>
-
-<!-- What we are -->
-<script>
-
-var title = ['Web Design Studio', 'Web Development Agency', 'Little German Boy', 'Place of dreams', 'Gaggle of Guys who dream of a better web'];
-
-var i = 0;  
-
-setInterval(function() {          
-    document
-        .getElementById('DVis')
-        .innerHTML = title[i++];
-    if (i == title.length) i = 0;
-}, 3000);
-
-</script>
-	
 	</BODY>
 	</HTML>
