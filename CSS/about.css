@@ -1,0 +1,113 @@
+body{background-color: #ffffff;
+background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMScgaGVpZ2h0PScyMicgdmlld0JveD0nMCAwIDUgMTAnPgoJPHJlY3Qgd2lkdGg9JzExMCUnIHg9Jy01JScgeT0nLTUlJyBoZWlnaHQ9JzExMCUnIGZpbGw9JyNmZmZmZmYnLz4KCTxsaW5lIHgxPSctMicgeTE9JzEnIHgyPSc3JyB5Mj0nMTAnIHN0cm9rZT0nI2ZmMWIyMScgc3Ryb2tlLXdpZHRoPScwLjUxJy8+Cgk8bGluZSB4MT0nLTInIHkxPSc2JyB4Mj0nNycgeTI9JzE1JyBzdHJva2U9JyNmZjFiMjEnIHN0cm9rZS13aWR0aD0nMC41MScvPgoJPGxpbmUgeDE9Jy0yJyB5MT0nLTQnIHgyPSc3JyB5Mj0nNScgc3Ryb2tlPScjZmYxYjIxJyBzdHJva2Utd2lkdGg9JzAuNTEnLz4KPC9zdmc+');}
+.headCase{
+width:70%;
+margin:auto;
+background:url('/images/red.svg') repeat-y center;
+background-size:2px;
+min-height:10em;
+padding-top:3em;
+}
+.head{
+width:45%;
+}
+.head:first-child{
+margin-right:9%!important;
+}
+#coin{
+font-family:bebas;
+font-size:5em;
+color:#ff1b21;
+display:block;
+word-spacing: 0.5em;
+text-align: center;
+margin-bottom: 1em;
+background: white;
+border: 2px solid;
+}
+.bio{
+width:45%;
+float:left;
+min-height:5em;
+background:white;
+border:2px solid #ff1b21;
+color:#ff1b21;
+font-family:Courier New;
+font-weight:normal;
+padding-bottom:2em;
+margin-bottom:4em;
+}
+.bio:nth-child(1){
+margin-right:9%;
+}
+.name{
+font-weight:normal;
+text-align:center;
+}
+.bioText{
+width:80%;
+margin:auto;
+margin-top:1em;
+}
+.skills{
+width:90%;
+margin-left:5%;
+}
+.php, .html5, .css3 ,.js ,.seo , .ajax{
+height:2em;
+color:white;
+font-family: Courier New, monospace;
+display:block;
+
+margin:auto;
+text-align:center;
+} 
+.php{
+width:60%;
+background:#E61986;
+}
+.html5{
+width:100%;
+background:#0F8A5B;
+}
+.css3{
+width:100%;
+}
+#AlignRight{
+float:right;
+}
+.studio{
+width:70%;
+min-height:20em;
+background:white;
+border:2px solid #ff1b21;
+color:#ff1b21;
+font-family:Courier New;
+margin:auto;
+margin-bottom:4em;
+padding-bottom:2em;
+}
+.title{
+font-family:bebas;
+font-size:5em;
+color:#ff1b21;
+font-weight:normal;
+font-size:3em;
+margin:0;
+display:block;
+text-align:center;
+}
+.innerParagraph{
+width:80%;
+margin:auto;
+margin-top:1em;
+}
+.tenets{
+width:45%;
+margin-right:5%;
+}
+@media (max-width:960px){
+.headcase{
+width:90%;
+}
+}
