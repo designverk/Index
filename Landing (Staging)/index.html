@@ -1,0 +1,93 @@
+<!DOCTYPE>
+<HTML>
+<HEAD>
+
+
+<TITLE> Designverk Prototype </TITLE>
+
+<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+<link type="stylesheet" ref="css/responsiveslides.css">
+<txp:css format="link" name="designverk" />
+
+</HEAD>
+<BODY>
+
+<txp:output_form form="Header" />
+
+<txp:output_form form="Slider" />
+
+<div class='description'>
+
+<div class='WeAre'>
+  <P> <span class='red'> Designverk </span>is a <span id="DVis">_____________________ </span> based in Glasgow, Scotland. </p> 
+  
+</div> 
+   </div>
+
+<div id='pattern'> </div>
+<div class='redFrame'>
+
+<div id='redWrap'>
+
+<div class='work'>
+<h2 class='workTitle'> See<br/> Our <br/> Work </h2>
+<div class='workOverlay'></div>
+</div>
+
+
+<div class='blog'>
+<label> Blog </label>
+<ul class='blogList'>
+<txp:article_custom form="Blog Listing" limit="5" pgonly="0" section="blog" sort="Posted desc" status="4" />
+</ul>
+</div>
+
+
+<div class='quarterLeft'>
+<div class='contact'>
+<label> Let's Dish</label>
+<ul><li> Email Us: <a href='mailto:team@designverk.com'>team@designverk.com </a> </li>
+<li> By Phone: +447447551545 </li>
+<li> "Like Like" us: <br> </li></ul><a href='http://www.facebook.com/designverk' class='dvFacebook'> Designverk </a>
+</div> <!-- Contact -->
+
+<div class='about'>
+
+
+</div> <!-- About -->
+</div> <!-- QuarterLeft -->
+<div class='Apart'>
+<div class='ApartTitle'>
+</div> <!-- Apart Title -->
+<div class='ApartOverlay'>
+</div> <!-- Apart Overlay -->
+</div> <!-- Apart -->
+
+
+<div class='clear'></div>
+</div> <!-- RedWrap -->
+</div> <!-- RedFrame -->
+<div id='lowerPattern'></div>
+<footer>
+
+<div class='photoframe'>
+
+ <div id="photolist"></div>
+ <div id="showphoto"></div>
+
+</div>
+
+
+<small class='copyright'> Designverk © 2014 </small>
+</footer>
+
+
+<!--<script src="http://api.flickr.com/services/feeds/photos_public.gne?id=121960234@N07&amp;format=json"></script>-->
+
+<txp:output_form form="scripts" />
+</BODY>
+</HTML>
