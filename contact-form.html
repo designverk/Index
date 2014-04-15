@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+<div class='formWrapPlace'>
+<div id='contactOverlay'></div>
+<div class='formWrapper'>
+<form name='contactForm' action='contact.php' method='POST'>
+
+<p id='contactUs'>Contact us!</p>
+
+<p>Why are you contacting us today?</p> <!-- Uncertain of this, but thought it should say something -->
+<select name='subject' id='contactreason'>
+<option id="work" value="work"> Work </option>
+<option id="hey" value="hey"> Just saying hey </option>
+<option id="invite" value="invite"> Invitation </option>
+</select>
+
+<label><P class='input'> Email: </P></label> <input type="email" class='field' id='inputfield' name="email" tabindex='1'>
+<label><P class='input'> Name: </P></label> <input type="text" class='field' id='inputfield' name="name" tabindex='2'>
+<label><P class='input'> Message: </P></label> <textarea class='textarea' id='inputfield' name="message" spellcheck='true' rows="10" cols="50" tabindex='3'> </textarea>
+
+<input type="submit" name="submit" value="Go" id="gobutton"></input>
+
+<input type="button" value="Close" id="closebutton"/>
+</form>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> <!-- Remove later -->
+	
+<script>
+$(document).ready(function() {
+	$('#closebutton').click(function() {
+		$('.formWrapPlace').toggleClass('hidden');
+	});
+	$('#contactOverlay').click(function() {
+		$('.formWrapPlace').toggleClass('hidden');
+	});
+});
+</script>
+
+</div>
+</div>
+</BODY>
+</HTML>

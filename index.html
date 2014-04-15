@@ -15,7 +15,22 @@
 </HEAD>
 <BODY>
 
-<txp:output_form form="Header" />
+<header>
+<txp:link_to_home>
+<div id='logoWrap'>
+<img src='/images/logo.svg' class='logo' id='logo'>
+</div>
+</txp:link_to_home>
+<nav>
+<ul class='navList'>
+<a href='/work'><li> Work </li></a>
+<a href='/about'><li> About </li></a>
+<li id='contact'> Contact </li>
+<a href='/blog'><li id='blogButton'> Blog </li></a>
+</ul>
+</nav>
+</header>
+<div class='clear'></div>
 
 <txp:output_form form="Slider" />
 
@@ -87,6 +102,89 @@
 
 <!--<script src="http://api.flickr.com/services/feeds/photos_public.gne?id=121960234@N07&amp;format=json"></script>-->
 
-<txp:output_form form="scripts" />
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src='/scripts/responsiveslides.min.js'></script>
+<script src='/scripts/flickr.js'></script>
+
+<!-- Header time transition -->
+<script>
+var date = new Date();
+var time = date.getHours();
+
+var now = (new Date()).getTime();
+var lastTime = 0;
+var lastTimeStr = localStorage['lastTime'];
+
+if(time < 20 && time > 7){
+  $('header').css('background','#A1E8E8');
+}
+else{
+if (lastTimeStr) lastTime = parseInt(lastTimeStr, 10);
+if (now - lastTime > 2*60*60*1000) {
+	$('header').addClass('headerFade');
+	$('#logoWrap').fadeOut(700, function(){
+	$("#logo").attr('src', '/images/logo3.svg');
+	});
+	$('#logoWrap').fadeIn(700);
+} 
+else{
+  $('#logoWrap').fadeOut(0, function(){
+  $("#logo").attr('src', '/images/logo3.svg');
+  });
+  $('#logoWrap').fadeIn(0);
+}
+localStorage['lastTime'] = ""+now;
+$('header').css('background','#12121B');
+$('nav').css('border-color','#fff');
+};
+</script>
+
+<!-- Slides -->
+<script>
+  $(function() {
+	$(".rslides").responsiveSlides({
+	auto: true,             // Boolean: Animate automatically, true or false
+	speed: 700,            // Integer: Speed of the transition, in milliseconds
+	timeout: 8000,          // Integer: Time between slide transitions, in milliseconds
+	nav: true,
+	pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+	navContainer: ".sliderControls", 
+	pager: false,
+  });
+});
+</script>
+
+<!-- New Contact Form Script -->
+<script>
+$(document).ready(function() {
+   $.get( "contact-form.html", function( data ) {
+      $( data ).insertAfter('header');
+      $('.formWrapPlace').toggleClass('hidden');
+   });
+   $('#contact').click(function() {
+      $('.formWrapPlace').toggleClass('hidden');
+      $('html, body').animate({
+      scrollTop: $(".formWrapper").offset().top
+      }, 1000);
+   });
+});
+</script>
+
+<!-- What we are -->
+<script>
+
+var title = ['Web Design Studio', 'Web Development Agency', 'Little German Boy', 'Place of dreams', 'Gaggle of Guys who dream of a better web'];
+
+var i = 0;  
+
+setInterval(function() {          
+    document
+        .getElementById('DVis')
+        .innerHTML = title[i++];
+    if (i == title.length) i = 0;
+}, 3000);
+
+</script>
+
 </BODY>
 </HTML>

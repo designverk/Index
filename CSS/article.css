@@ -1,0 +1,57 @@
+body{background:aliceblue;}
+#blog{
+font-family:Bebas, sans;
+text-align:center;
+font-size:5em;
+margin-top:1em;
+color:#ff1b21;
+display:block;
+letter-spacing:0.3em;
+}
+.blogFeed{
+width:60%;
+min-height:30em;
+background:white;
+margin-left:20%;
+padding-top:2em;
+}
+.blogPost{
+width:90%;
+margin-left:5%;
+}
+.blogTitle{
+  font-family:"Bebas", Bebas Neue, Norwich, Serif;
+  font-weight:normal;
+}
+.blogLead{
+width:100%;
+}
+.blogLead li{
+width:45%;
+float:left;
+}
+.blogLead li:nth-child(2){
+float:right;
+text-align:right;
+}
+.readMore{
+font-weight:600;
+font-style:italic;
+color:#ff1b21;
+text-align:right;
+display:block;
+}
+.pagination{
+width:60%;
+background:white;
+height:3em;
+margin:auto;
+margin-bottom:5em;
+}
+.blogCopyright{
+width:60%;
+margin:auto;
+display:block;
+color:#ff1b21;
+font-family:Courier New, Monospace;
+}
