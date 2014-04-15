@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<HTML>
+<HEAD>
+
+
+<TITLE> Designverk Prototype </TITLE>
+
+<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+<link type="stylesheet" ref="css/responsiveslides.css">
+<txp:css format="link" name="designverk" />
+	
+</HEAD>
+<BODY>
+
+<header>
+<div id='logoWrap'>
+<img src='/images/logo.svg' class='logo' id='logo'>
+</div>
+<nav>
+<ul>
+<a href='#'>
+<li> Work </li>
+<li> About </li>
+<li> Contact </li>
+<li> Blog </li>
+</a>
+</ul>
+</nav>
+</header>
+
+<div class='clear'></div>
+
+<div role="main">
+
+        <txp:if_article_list><h1><txp:section title="1" /></h1></txp:if_article_list>
+
+        <txp:article listform="article_listing" limit="5" />
+        <!-- or if you want to list all articles from all sections instead, then replace txp:article with txp:article_custom -->
+
+        <!-- add pagination links to foot of article/article listings if there are more articles available,
+          this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
+        <p id="paginator">
+
+        <txp:if_individual_article>
+
+          <txp:variable name="prev" value='<txp:link_to_prev />' />
+          <txp:variable name="next" value='<txp:link_to_next />' />
+
+          <txp:if_variable name="prev" value="">
+            <span id="paginator-l" class="button disabled">&#8592; <txp:text item="older" /></span>
+          <txp:else />
+            <a id="paginator-l" href="<txp:link_to_prev />" title="<txp:prev_title />" class="button">&#8592; <txp:text item="older" /></a>
+          </txp:if_variable>
+          <txp:if_variable name="next" value="">
+            <span id="paginator-r" class="button disabled"><txp:text item="newer" /> &#8594;</span>
+          <txp:else />
+            <a id="paginator-r" href="<txp:link_to_next />" title="<txp:next_title />" class="button"><txp:text item="newer" /> &#8594;</a>
+          </txp:if_variable>
+
+        <txp:else />
+
+          <txp:variable name="prev" value='<txp:older />' />
+          <txp:variable name="next" value='<txp:newer />' />
+          <txp:if_variable name="prev" value="">
+            <span id="paginator-l" class="button disabled">&#8592; <txp:text item="older" /></span>
+          <txp:else />
+            <a id="paginator-l" href="<txp:older />" title="<txp:text item='older' />" class="button">&#8592; <txp:text item="older" /></a>
+          </txp:if_variable>
+          <txp:if_variable name="next" value="">
+            <span id="paginator-r" class="button disabled"><txp:text item="newer" /> &#8594;</span>
+          <txp:else />
+            <a id="paginator-r" href="<txp:newer />" title="<txp:text item='newer' />" class="button"><txp:text item="newer" /> &#8594;</a>
+          </txp:if_variable>
+
+        </txp:if_individual_article>
+
+        </p>
+
+</BODY>
+</HTML>
